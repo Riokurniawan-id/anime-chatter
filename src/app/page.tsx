@@ -101,9 +101,7 @@ export default function HomePage() {
           </Card>
         ))}
       </div>
-      <div className=" z-50 text-sm text-red-400 font-semibold select-none pointer-events-none">
-        © 2025 Rio Kurniawan. All rights reserved.
-      </div>
+     
     </main>
   );
 }
