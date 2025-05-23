@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), sans-serif; /* Use Geist Sans from layout.tsx */
+}
+
+@layer base {
+  :root {
+    /* Futuristic Cool Light Theme */
+    --background: 220 25% 97%; /* Very light cool gray */
+    --foreground: 220 15% 25%; /* Dark cool gray-blue */
+
+    --card: 220 20% 100%; /* White card */
+    --card-foreground: 220 15% 25%;
+
+    --popover: 220 20% 100%;
+    --popover-foreground: 220 15% 25%;
+
+    /* Primary: A modern, slightly desaturated blue/cyan */
+    --primary: 195 65% 55%; /* #67B8D6 */
+    --primary-foreground: 210 40% 98%; /* Almost white for contrast */
+
+    /* Secondary: Lighter shade of primary or a complementary cool tone */
+    --secondary: 195 60% 88%; /* Light cyan */
+    --secondary-foreground: 195 65% 35%; /* Darker cyan for text on light cyan */
+
+    --muted: 220 20% 92%; /* Muted cool gray */
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent: Spotlight Red */
+    --accent: 0 80% 60%;   /* #ED4D4D - Vibrant Red */
+    --accent-foreground: 0 0% 100%; /* White text on red */
+
+    --destructive: 0 70% 50%; /* Keeping a standard destructive red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 85%; 
+    --input: 220 15% 94%; 
+    --ring: 195 70% 50%; /* Ring color related to primary */
+
+    --radius: 0.5rem;
+    
+    --chart-1: 195 70% 50%; 
+    --chart-2: 0 80% 65%;   
+    --chart-3: 210 50% 60%; 
+    --chart-4: 180 40% 50%; 
+    --chart-5: 240 40% 60%; 
+    
+    --sidebar-background: 220 20% 98%;
+    --sidebar-foreground: 220 15% 25%;
+    --sidebar-primary: 195 65% 55%; 
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 0 80% 60%;   
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 195 70% 50%;
+  }
+
+  .dark {
+    /* Futuristic Cool Dark Theme */
+    --background: 220 20% 12%; /* Very dark cool gray-blue */
+    --foreground: 220 15% 88%; /* Light cool gray */
+
+    --card: 220 20% 18%; /* Darker card */
+    --card-foreground: 220 15% 88%;
+
+    --popover: 220 20% 18%;
+    --popover-foreground: 220 15% 88%;
+
+    /* Primary (Dark): Brighter version of light theme primary for visibility */
+    --primary: 195 70% 65%; /* #85C9E0 */
+    --primary-foreground: 195 65% 15%; /* Dark for contrast on brighter primary */
+
+    /* Secondary (Dark): Darker shade, but distinct from background */
+    --secondary: 220 15% 25%; 
+    --secondary-foreground: 220 10% 75%;
+
+    --muted: 220 15% 22%; 
+    --muted-foreground: 220 10% 60%;
+
+    /* Accent (Dark): Spotlight Red, ensure it pops */
+    --accent: 0 85% 65%;   /* #F25E5E - Slightly brighter red for dark bg */
+    --accent-foreground: 0 0% 100%; 
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 28%;
+    --input: 220 15% 22%;
+    --ring: 195 75% 60%;
+    
+    --chart-1: 195 70% 60%;
+    --chart-2: 0 80% 70%;
+    --chart-3: 210 50% 70%;
+    --chart-4: 180 40% 60%;
+    --chart-5: 240 40% 70%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 220 15% 88%;
+    --sidebar-primary: 195 70% 65%;
+    --sidebar-primary-foreground: 195 65% 15%;
+    --sidebar-accent: 0 85% 65%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 15% 20%;
+    --sidebar-ring: 195 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    @apply min-h-screen; 
+  }
+}
+
+@layer utilities {
+  .chat-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .chat-scrollbar::-webkit-scrollbar-track {
+    @apply bg-secondary/50 rounded-full;
+  }
+  .chat-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+  .chat-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/80;
+  }
+}
